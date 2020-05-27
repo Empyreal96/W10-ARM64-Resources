@@ -1,122 +1,241 @@
-			
-				Windows 10 Home ARM64 17760 (1809) edit v1 (Software Used: DISM++(credit due to devs for the tool)
-						Modified and built on 22/04/2020 by Empyreal96 XDA Member
+This is a pretty much a complete redo so this changelog is just for Version 2, Version 1 is now depricated.
 
-##THIS IS NOT A PIRATED VERSION. ACTIVATION WILL BE NEEDED IF NOT USED WITH WOA DEPLOYER AND TEST MODE##
+Changelog v2-a2
+Added 'newuser.bat' script and updated SetupComplete.cmd
 
-INSTRUCTIONS: You will need an 'install.wim' from an unedited 17760 (1809) ISO
-because WoA Deployer doesn't agree with the edited version.
-
-	1. Make sure you have the 'stock' install.wim from ISO and the Version1.wim in the same folder.
-	2. Open WoA Deployer > Browse for the Wim files > select the 'Stock' install.wim
-	3. When WoA detects the 'Stock' .wim, go back to the Wim Folder > rename install.wim to installbak.wim
-	4. Rename Version1.wim to install.wim
-	5. Go back to WoA and Start deployment. 
-
-Note: Renaming the modified wim after selecting the 'stock' wim is like a hdd hotswap, the program WoA sees the 'stock' wim
-and loads it, then swapping the name of the Version1.wim to install.wim fools WoA to deploy with the edited unrecognised wim.
-You may encounter, after finishing deploy and drivers have been injected, an error syaing invalid .WIM file.. this is expected 
-but the deployment was still successful
+Added IP addresses relating to Telemetry and other services like that, while trying to protect Windows Update (Credit: https://github.com/Forsaked
 
 
-Changelog V1:
-Appx Packages Remove:
-	Bing Weather
-	MS Get Help
-	MS Get Started
-	MS 3d Viewer
-	Office Hub
-	MS Solitaire
-	Sticky Notes
-	MS Office OneNote
-	MS Print 3D
-	SkypeApp
-	MS Windows Feedback Hub
-	Windows Maps
-	Xbox TCUI
-	MS XboxApp
-	MS XboxGameOverlay
-	MS XboxGamingOverlay
-	MS XboxIdentityProvider
-	MS XboxTextToSpeech
-
-Taskbar:
-	Cortana Hidden
-	Hide Task View
-	Hide People
-
-Windows Theme Settings:
-	Show Colour on Start, Task bar, Windows frames etc
-	Disable Transparency
-
-Security Settings:
-	Change UAC Behaviour to Never notify (This will put you at risk if you download and run software from questionable sources that may have viruses)
-	Disable SmartScreen Filter
-	Disable Windows Defender (If you NEED antivirus then try find an alternative, I may show how to re-enable it later on)
-
-Start and Windows Experience:
-	Disable suggestions on Start Menu
-	Disable ads from Windows Store
-	Disable 'Get Suggestions using Windows'
-	Disable automatic installation of recommended apps
-	Disable Game Recorder
-	Disable OneDrive (Will break MS Store apps requiring OneDrive for Cloud sync)
-	Disable Cortana
-
-Explorer:
-	Open File Explorer to This PC
-	Show Extensions for all files
-	Show all hiddden files
-	Show Complete Path in Explorer
-	Disabled Audio and Video file previews
-	Disable showing Frequently and Recently used in Quick Access
-
-Desktop:
-	Show My Computer, Control Panel and User Folder on Desktop
-
-Context Menu:
-	Disable Scan with Windows Defender
-	Disable Paint 3D option
-
-Windows Update:
-	Never check for update
-	Don't include Drivers in updates
 
 Services Disabled:
-	Remote Registry
-	Diagnostic Service
-	Windows Search (May cause some Windows Store apps to fail)
-	Customer Experience Improvement
+Application Identity
+Bitlocker Drive Encryption Service
+Connected User Device Services set to Manual
+Display Policy Service set to Manual
+ktmrm for Distributed Transaction Coordinator  set to Manual
+Performance logs and alerts
+Still Image Aquisition Events
 
-Misc:
-	Disable Automatic Restart on BSOD
-	Disable Hibernate and Hiberboot
-	Disabled 'Component Based Servicing', 'Delta Package Expander', System and 'Acount Login' Logs and collection
-	Disabled Component Based Servicing Backup
-	OneDrive setup Disabled on First Boot/New User
 
-Windows Features:
-	Disabled/Removed:
-		Internet Explorer 11
-		Windows Media Player
-		Print and Document Services
-		Print to PDF
-		XPS Document Writer
-		Windows Search
-		Work Folders Client
-	Enabled:
-		Legacy Components/DirectPlay
-		Windows Subsystem for Linux
-		.NET Framework 3.5
 
-Optional Featues:
-	Disabled:
-		Internet Explorer 11
-		Windows Hello Face
-		Windows Media Player
-		MS Exchange and Mail Sync engine (Affect UWP Apps)
-	
+Changelog v2-A1
+This is a Alpha build using new methods, if this is stable enough I will further tweak and add my SetupComplete.cmd
 
-		
-	
-	
+Expect some Services to restart/start even though I have set them to Disabled, i am looking into Registry Entries corresponding to the Services disabled.
+
+Expect things to be broken.
+
+Removed Features:
+
+AD LDS Services
+Data Center Bridging
+Host Guardian
+Hyper-V
+Internet Explorer 11
+(Disabled) Internet Information Services
+(Disabled) .NET 4.6 Network Adv Services
+Printing - LPR Port Monitor, LDP Print Service, Internet Printing, Fax & Scan Services
+Remote Access Connection (Probs breaks VPNs)
+Windows Defender Application Guardian
+Windows Media Player
+Work Folders
+XPS Viewer and Printer
+
+Enabled:
+Windows Subsystem Linux
+Direct Play
+
+
+Removed "Accessories":
+
+Adaptive Cards
+Hyper-V Manager
+Print Management
+Anytime Upgrade
+Application Experience (Engine) (Compat Tab, Doesn't really apply to ARM)
+Auto Play
+Automatic Maintenance
+Briefcase
+Character Map
+Cleartype Tuner
+Disagnostcs Troubleshooting Wizard
+Diagnostics for (Apps, Audio, BITS, Bluetooth, IE Browser & Security, Keyboard, Maintenance, Memory, Power, Printer, Search, Speech, Video, Windows Media Player, Windows Update)
+Disk Image Burning Tool
+Disk Quota
+Help and support (Engine)
+Imapi
+Machine Learning
+Night-light
+Previous Versions
+Private Character Editor
+Recovery Drive Creator
+Steps Recorder (Doesn't work on ARM64 Lumias)
+System Reset Platform
+System Restore
+System Rollback your PC
+Webcam Experience
+Welcome Center
+Easy Transfer
+Windows Mail
+Windows Recovery Environment
+Windows Repair Disc
+Windows Sidebar
+Windows To Go
+Wordpad
+
+Removed "Modern UI Apps"(Not all of these will be installed)
+3D Builder
+3D Print
+3D Viewer
+Bing Finance, Food and Drink, Health and Fitness, News, Travel, Weather
+Camera (No Camera Drivers for Lumia)
+Camera Barcode Scanner (No Camera Drivers for Lumia)
+Connect
+Contact Support
+Content Delivery Manager
+Cortana
+Cortana (OOBE)
+Dialog (Add Suggested Folders to Library)
+Framework (Advertising SDK)
+Framework (Windows Mixed Reality SDK)
+Framework (Windows XBOX LIVE Games)
+Get Help
+Get Started
+Lockscreen Apps
+Microsoft Wi-Fi
+Office Hub
+OneConnect
+OneNote
+Paint3D
+Parental Controls
+Print 3D
+Retail Demo
+Screen Sketch
+Skype
+Slide to Shutdown
+Solitaire
+Sticky Notes
+Sway
+Windows Defender
+Windows Feedback
+Windows Maps
+Windows Mixed Reality
+Windows Photos Print Dialog
+Xbox LIVE Games features
+zune Music
+Zune Videos
+
+
+
+'Multimedia' Components Removed:
+
+Biometrics - Face Auth, Detection and Recognition, Finger Print.
+Game Bar, Game Mode Games Explorer
+HDCP Monitor Support
+Windows Imaging Components
+Windows Media Center
+
+
+
+Networking Components and Features:
+
+Data Deduplication
+Geolocation
+NetBIOS
+OneDrive
+Remote Assistance
+Remote Desktop Connection, Remote Desktop(Quick Assist)
+SmartScreen
+Telemetry
+
+
+Privacy Settings/Options/Features Removed:
+
+(Activity History) Windows collection activities, sync activities to the cloud and access diagnostic information.
+(Feedback & Diagnostics) Sending diagnostic and usage data, inking and typing data, allow 'tailored' experiences from diagnositc data, send feedback frequency
+(General Privacy) Allow using Advertising ID across apps, websited provide locally relevant content using language list, windows tracking app start and search results, suggest app content in Settings app, Inking and typing getting to know you
+
+
+Theming:
+Removed Unneeded cursors, Wallpapers, lockscreen pictures and screensavers
+
+Tweaks and Misc:
+Context Menu - Remove WMp add to list, edit with 3D paint, print link for txt and ini files
+Desktop - Added Control Panel Shortcut, My PC and User folder shortcuts, Disabled get tips, triks and suggest, hide popup help tips
+Explorer - Disable Ads and Notifications, thumbnails with caches, disable user tracking, showing hidden folders and files, make explorer open to this pc,
+Windows Defender removed
+Disabled Tiles
+
+
+Services Removed or Disabled (Ones with * are REMOVED):
+ActiveX Service
+AllJoyn Router Service*
+Application Layer Gateway Service*
+Assigned Access Manager Service*
+Background Intelligent Transfer Service
+Block Level Backup Engine Service
+BranchCache Service*
+Connected User Experiences and Telemetry*
+Contact Data Service*
+Data Sharing Service
+Data Usage Service
+Delivery Optimization Service
+Diagnostic Execution Service
+Diagnostic Policy Services*
+Diagnostic Service Host Service
+Diagnostic Systemm Host Service
+Display Enhancement Service*
+Distributed link Tracking Client Service
+Embedded Mode Service
+Encrypting File System Service
+Enterprise App Management Service
+Fax Service*
+Game DVR and Broadcast User Service*
+Geolocation Service*
+GPU Energy Driver Service
+Graphics Performance Service
+Homegroup Listener and Provider Services
+Hyper-V Services*
+Infared Monitor Service*
+Link-Layer Topology Discovery Mapper Service
+Optimize Drives Service
+Parental Controls Service*
+Payments and NFC manager Service*
+Printer Support Services*
+Print Workflow Service*
+Problem Reports and Solutions Service
+Program Compatability Assistant Service
+Recommended Troubleshooting Service
+Remote Desktop Services*
+Remote Desktop UserMode Port Redirector Service
+Remote Registry
+Routing and Remote Access Service
+Security Center Service
+Smart Card Services*
+Spatial Data Service
+System Event Notification Service
+TCPIP NetBIOS Helper Service
+User Experience Virtualization Service
+Volume Shadow Cpoy Service
+Volumetric Audio Compositor Service
+Windows Backup Service
+Windows Biometric Service
+Windows Camera Frame Service
+Windows Defender Service
+Windows Defender Security Center Service
+Windows Defender System Guard Service
+Windows Error Reporting Service*
+Windows Indexing Service
+Windows Insider Program Service
+Windows Media Player Network Sharing Service*
+Windows Mobile Hotspot Service
+Windows Perception Service*
+Windows Update Service
+Windows Update Medic Service (Note to self may try remove to see if update still work ie ms store)
+Wired AutoConfig Service
+Xbox Accessory Management Service
+Xbox Game Monitoring Service*
+Xbox Live Auth Manager Service*
+Xbox Live Game Save Service*
+Xbox Live Networking Service*
+

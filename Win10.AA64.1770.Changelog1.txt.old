@@ -1,0 +1,122 @@
+			
+				Windows 10 Home ARM64 17760 (1809) edit v1 (Software Used: DISM++(credit due to devs for the tool)
+						Modified and built on 22/04/2020 by Empyreal96 XDA Member
+
+##THIS IS NOT A PIRATED VERSION. ACTIVATION WILL BE NEEDED IF NOT USED WITH WOA DEPLOYER AND TEST MODE##
+
+INSTRUCTIONS: You will need an 'install.wim' from an unedited 17760 (1809) ISO
+because WoA Deployer doesn't agree with the edited version.
+
+	1. Make sure you have the 'stock' install.wim from ISO and the Version1.wim in the same folder.
+	2. Open WoA Deployer > Browse for the Wim files > select the 'Stock' install.wim
+	3. When WoA detects the 'Stock' .wim, go back to the Wim Folder > rename install.wim to installbak.wim
+	4. Rename Version1.wim to install.wim
+	5. Go back to WoA and Start deployment. 
+
+Note: Renaming the modified wim after selecting the 'stock' wim is like a hdd hotswap, the program WoA sees the 'stock' wim
+and loads it, then swapping the name of the Version1.wim to install.wim fools WoA to deploy with the edited unrecognised wim.
+You may encounter, after finishing deploy and drivers have been injected, an error syaing invalid .WIM file.. this is expected 
+but the deployment was still successful
+
+
+Changelog V1:
+Appx Packages Remove:
+	Bing Weather
+	MS Get Help
+	MS Get Started
+	MS 3d Viewer
+	Office Hub
+	MS Solitaire
+	Sticky Notes
+	MS Office OneNote
+	MS Print 3D
+	SkypeApp
+	MS Windows Feedback Hub
+	Windows Maps
+	Xbox TCUI
+	MS XboxApp
+	MS XboxGameOverlay
+	MS XboxGamingOverlay
+	MS XboxIdentityProvider
+	MS XboxTextToSpeech
+
+Taskbar:
+	Cortana Hidden
+	Hide Task View
+	Hide People
+
+Windows Theme Settings:
+	Show Colour on Start, Task bar, Windows frames etc
+	Disable Transparency
+
+Security Settings:
+	Change UAC Behaviour to Never notify (This will put you at risk if you download and run software from questionable sources that may have viruses)
+	Disable SmartScreen Filter
+	Disable Windows Defender (If you NEED antivirus then try find an alternative, I may show how to re-enable it later on)
+
+Start and Windows Experience:
+	Disable suggestions on Start Menu
+	Disable ads from Windows Store
+	Disable 'Get Suggestions using Windows'
+	Disable automatic installation of recommended apps
+	Disable Game Recorder
+	Disable OneDrive (Will break MS Store apps requiring OneDrive for Cloud sync)
+	Disable Cortana
+
+Explorer:
+	Open File Explorer to This PC
+	Show Extensions for all files
+	Show all hiddden files
+	Show Complete Path in Explorer
+	Disabled Audio and Video file previews
+	Disable showing Frequently and Recently used in Quick Access
+
+Desktop:
+	Show My Computer, Control Panel and User Folder on Desktop
+
+Context Menu:
+	Disable Scan with Windows Defender
+	Disable Paint 3D option
+
+Windows Update:
+	Never check for update
+	Don't include Drivers in updates
+
+Services Disabled:
+	Remote Registry
+	Diagnostic Service
+	Windows Search (May cause some Windows Store apps to fail)
+	Customer Experience Improvement
+
+Misc:
+	Disable Automatic Restart on BSOD
+	Disable Hibernate and Hiberboot
+	Disabled 'Component Based Servicing', 'Delta Package Expander', System and 'Acount Login' Logs and collection
+	Disabled Component Based Servicing Backup
+	OneDrive setup Disabled on First Boot/New User
+
+Windows Features:
+	Disabled/Removed:
+		Internet Explorer 11
+		Windows Media Player
+		Print and Document Services
+		Print to PDF
+		XPS Document Writer
+		Windows Search
+		Work Folders Client
+	Enabled:
+		Legacy Components/DirectPlay
+		Windows Subsystem for Linux
+		.NET Framework 3.5
+
+Optional Featues:
+	Disabled:
+		Internet Explorer 11
+		Windows Hello Face
+		Windows Media Player
+		MS Exchange and Mail Sync engine (Affect UWP Apps)
+	
+
+		
+	
+	
